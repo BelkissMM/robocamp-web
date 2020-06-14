@@ -16,6 +16,7 @@ pipeline {
       stage('Test'){
          steps {
             echo 'Executando testes de regressão'
+            input (message: 'Aguarde',OK: 'Prosseguir')
             sh 'robot -d ./logs -i login tests/'
             }
          post {
