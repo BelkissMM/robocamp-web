@@ -58,7 +58,7 @@ Mas este produto já foi cadastrado
     Go To Product Form
     Create New Product        ${product_json}
     
-
+    
 Quando eu faço o cadastro desse produto
     Go To Product Form
     Create New Product        ${product_json}
