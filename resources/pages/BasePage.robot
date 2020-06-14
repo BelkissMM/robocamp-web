@@ -39,4 +39,4 @@ Open Chrome
 
 
 Open Chrome Readless
-     Open Browser    ${base_url}/login    headlesschrome   options=add_experimental_option('excludeSwitches', ['enable-logging'])
+     Open Browser    ${base_url}/login    headlesschrome     options=add_argument('--disable-dev-shm-usage')
