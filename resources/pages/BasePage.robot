@@ -10,7 +10,13 @@ ${ALERT_INFO}           class:alert-info
 *** Keywords ***
 ### Hooks
 Open Session
-    Open Chrome Readless
+    Run Keyword if      "${browser}" == "chrome"
+    ...     Open Chrome
+
+    Run Keyword if      "${browser}" == "headless"
+    ...     Open Chrome Headless
+
+    Open Chrome Headless
     Set Selenium Implicit Wait  5
     Set Window Size     1280        800
 
@@ -37,6 +43,5 @@ Product Form Session
 Open Chrome
     Open Browser    ${base_url}/login    chrome   options=add_experimental_option('excludeSwitches', ['enable-logging'])
 
-
-Open Chrome Readless
+Open Chrome Headless
      Open Browser    ${base_url}/login    headlesschrome     options=add_argument('--disable-dev-shm-usage')
