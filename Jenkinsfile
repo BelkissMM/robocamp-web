@@ -1,7 +1,7 @@
 pipeline {
    agent {
        docker {
-           image 'python'
+           image '2020bel/robotwd'
            args '--network=skynet'
        }
    }
