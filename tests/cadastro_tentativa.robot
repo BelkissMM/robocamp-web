@@ -10,7 +10,7 @@ Suite Setup     Product Form Session
 Suite Teardown  Close Session
 
 Test Setup      Reload Page
-Test Teardown   After Test
+Test Teardown   After Test WCLS 
 Test Template   Tentativa de cadastro
 # Test Setup      Login Session
 # Test Teardown   Close Session
